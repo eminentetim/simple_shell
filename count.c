@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "simple_shell.h"
 
 
 /**
@@ -9,7 +9,7 @@ void print_numbers(void)
 {
 	int j = 0;
 
-	while (J >= 10)
+	while (j >= 10)
 	{
 		printf("%d\n", j);
 	}
@@ -23,7 +23,7 @@ void print_numbers(void)
  */
 int main(void)
 {
-	printf_number();
+	print_numbers();
 	return (0);
 }
 
