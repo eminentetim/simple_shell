@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "simple_shell.h"
 
 /**
  * execute_args - map if command is a builtin or a process
@@ -20,20 +20,20 @@ int execute_args(char **args)
 		&own_help,
 		&own_exit
 	};
-	long unsigned int i = 0;
+	long unsigned int j = 0;
 
+/*check if empty command was entered */
 	if (args[0] == NULL)
 	{
-		/* empty command was entered */
 		return (-1);
 	}
-	/* find if the command is a builtin */
-	for (; i < sizeof(builtin_func_list) / sizeof(char *); i++)
+
+/* find if the command is a builtin */
+	for (; j < sizeof(builtin_func_list) / sizeof(char *); j++)
 	{
-		/* if there is a match execute the builtin command */
-		if (strcmp(args[0], builtin_func_list[i]) == 0)
+		if (strcmp(args[0], builtin_func_list[j]) == 0)
 		{
-			return ((*builtin_func[i])(args));
+			return ((*builtin_func[j])(args));
 		}
 	}
 	/* create a new process */

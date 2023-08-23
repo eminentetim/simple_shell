@@ -1,13 +1,13 @@
-#include "shell.h"
+#include "simple_shell.h"
 
 /**
- * main - function that checks if our shell is called
+ * main - function that checks if our shell is called or notcalled
  *
- * Return: 0 on success
+ * Return: 0 on success or 1 if not
  */
 int main(void)
 {
-	/* determines if file descriptor is associated with a terminal */
+	/* determining if file descriptor is associated with any terminal */
 	if (isatty(STDIN_FILENO) == 1)
 	{
 		shell_interactive();

@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "simple_shell.h"
 
 /**
  * new_process - create a new process
@@ -9,7 +9,7 @@
 int new_process(char **args)
 {
 	pid_t pid;
-	int status;
+	int sta;
 
 	pid = fork();
 	if (pid ==  0)
@@ -23,15 +23,15 @@ int new_process(char **args)
 	}
 	else if (pid < 0)
 	{
-		/* error forking */
 		perror("error in new_process: forking");
+		/* error forking */
 	}
 	else
 	{
-		/* parent process */
+		/* checking parent process */
 		do {
-			waitpid(pid, &status, WUNTRACED);
-		} while (!WIFEXITED(status) && !WIFSIGNALED(status));
+			waitpid(pid, &sta, WUNTRACED);
+		} while (!WIFEXITED(sta) && !WIFSIGNALED(sta));
 	}
 	return (-1);
 }

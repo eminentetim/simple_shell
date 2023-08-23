@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "simple_shell.h"
 
 /**
  * read_stream - read a line from the stream
@@ -8,7 +8,7 @@
 char *read_stream(void)
 {
 	int bufsize = 1024;
-	int i = 0;
+	int j = 0;
 	char *line = malloc(sizeof(char) * bufsize);
 	int character;
 
@@ -19,7 +19,9 @@ char *read_stream(void)
 	}
 	while (1)
 	{
-		character = getchar(); /* read first char from stream */
+
+/* reading the first char from stream */
+		character = getchar();
 		if (character == EOF)
 		{
 			free(line);
@@ -27,15 +29,15 @@ char *read_stream(void)
 		}
 		else if (character == '\n')
 		{
-			line[i] = '\0';
+			line[j] = '\0';
 			return (line);
 		}
 		else
 		{
-			line[i] = character;
+			line[j] = character;
 		}
-		i++;
-		if (i >= bufsize)
+		j++;
+		if (j >= bufsize)
 		{
 			bufsize += bufsize;
 			line = realloc(line, bufsize);
