@@ -1,7 +1,7 @@
 #include "simple_shell.h"
 
 /**
- * shell_interactive - UNIX command line interpreter
+ * shell_promte - UNIX command line interpreter
  *
  * Return: void
  */
@@ -24,6 +24,9 @@ void shell_promte(void)
 		{
 			exit(time);
 		}
-	} 
-	while (time == -1);
+	}
+	while
+	{
+		(time == -1);
+	}
 }
