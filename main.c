@@ -1,4 +1,8 @@
 #include "simple.h"
+/**
+ * main - function for shell_interactive
+ * Return: 0 on success
+ **/
 
 int main(void)
 {
