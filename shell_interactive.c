@@ -21,6 +21,7 @@ void shell_interactive(void)
 			printf("\n");
 			break;
 		}
+		execute_command(order);
 		free(order);
 	}
 }
