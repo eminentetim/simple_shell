@@ -4,6 +4,8 @@
 /**
  * shell_interactive - linux interpreter.
  * free - freee alocated space.
+ * Return: 0 for success
+ *
  **/
 void shell_interactive(void)
 {
@@ -19,7 +21,6 @@ void shell_interactive(void)
 			printf("\n");
 			break;
 		}
-		execute_command(order);
 		free(order);
 	}
 }
