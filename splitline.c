@@ -1,4 +1,5 @@
-#include "simple.h"
+#include "shell.h"
+#include "stdio.h"
 
 #define MAX_ARGS 64
 #define ARG_DELIMITER " \t\n\r"
@@ -12,13 +13,13 @@
 char **split_line(char *line)
 {
     int i = 0;
+    char *token = strtok(line, ARG_DELIMITER);
     char **tokens = malloc(MAX_ARGS * sizeof(char *));
     if (tokens == NULL) {
         perror("malloc");
         exit(EXIT_FAILURE);
     }
 
-    char *token = strtok(line, ARG_DELIMITER);
     while (token != NULL) {
         tokens[i] = strdup(token);
         i++;
