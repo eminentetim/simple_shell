@@ -7,7 +7,7 @@
 #include <string.h>
 
 
-// Function prototypes
+/*Function prototypes*/
 char *read_line(void);
 char **split_line(char *line);
 int execute_args(char **args);
