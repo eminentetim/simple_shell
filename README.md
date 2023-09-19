@@ -63,11 +63,11 @@ Non-interactive mode: ```echo "/bin/ls" | ./b_shell```
 * **Run shell in interactive mode:**
 
 ```
- $ ./hsh
+ $ ./shell
  simple_prompt$ ls -l
  total 72
 -rw-r--r-- 1 root root   771 Nov 16 12:01 execute_args.c
--rwxr-xr-x 1 root root 20192 Nov 16 12:31 hsh
+-rwxr-xr-x 1 root root 20192 Nov 16 12:31 shell
 -rw-r--r-- 1 root root   307 Nov 16 08:39 main.c
 -rw-r--r-- 1 root root   646 Nov 16 11:59 new_process.c
 -rw-r--r-- 1 root root   384 Nov 16 12:28 own_cd.c
@@ -89,7 +89,7 @@ Non-interactive mode: ```echo "/bin/ls" | ./b_shell```
 * **Run shell in non-interactive mode:**
 
 ```
- $ echo "/bin/ls" | ./hsh
+ $ echo "/bin/ls" | ./shell
  execute_args.c  new_process.c  own_exit.c   read_stream.c        shell_no_interactive.c
 hsh             own_cd.c       own_help.c   shell.h              split_line.c
 main.c          own_env.c      read_line.c  shell_interactive.c
