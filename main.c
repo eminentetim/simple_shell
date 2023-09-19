@@ -12,6 +12,8 @@ int main(void)
 	{
 		interactive();
 	}
+	/*checking if it is interactive or not */
+
 	else
 	{
 		non_interactive();
