@@ -14,6 +14,7 @@ char **sptlf(char *readl)
 	char **tokens = malloc(buffersize * sizeof(char *));
 	char *token;
 
+	/* runing a loop that check for token */
 	if (!tokens)
 	{
 		fprintf(stderr, "allocation of an error in the split_line: tokens\n");
@@ -29,6 +30,8 @@ char **sptlf(char *readl)
 		}
 		tokens[i] = token;
 		i++;
+
+		/* cheaking the size of the buffersize */
 		if (i >= buffersize)
 		{
 			buffersize += buffersize;
