@@ -3,9 +3,10 @@
 /**
  * cd - changing the working directory of the current
  * shell executon environment
+ *
  * @args: directory to change
  *
- * Return: 1 one success, 0 otherwise.
+ * Return: 1 one success, 0 fot unsuccessful.
  */
 int cd(char **args)
 {

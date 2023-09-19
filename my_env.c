@@ -9,14 +9,17 @@
 
 int env(char **args)
 {
-	int j = 0;
+	int e = 0;
 
 	(void)(**args);
-	while (environ[j])
+
+	/* checking the enveronment */
+
+	while (environ[e])
 	{
-		write(STDOUT_FILENO, environ[j], strlen(environ[j]));
+		write(STDOUT_FILENO, environ[e], strlen(environ[e]));
 		write(STDOUT_FILENO, "\n", 1);
-		j++;
+		e++;
 	}
 	return (-1);
 }
