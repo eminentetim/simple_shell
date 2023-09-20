@@ -40,7 +40,6 @@ char *get_stream(void)
 			readl = realloc(readl, buffersize);
 			if (readl == NULL)
 			{
-				/* Free the old buffer before exiting on realloc failure */
 				free(readl);
 				fprintf(stderr, "reallocation error in get_stream");
 				exit(EXIT_FAILURE);
