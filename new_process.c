@@ -4,6 +4,7 @@
 
 /**
  * npid - create a new process
+ * for the child and the parent
  * @args: array of strings that contains the command and its flags
  *
  * Return: 1 if success, 0 otherwise.
@@ -13,10 +14,11 @@ int npid(char **args)
 	pid_t pid;
 	int state;
 
+	/* forking the parent id */
 	pid = fork();
 	if (pid ==  0)
 	{
-	/*checking the child process */
+	/*checking for the child process */
 		if (execvp(args[0], args) == -1)
 		{
 			perror("error in npid: child process");
@@ -30,7 +32,7 @@ int npid(char **args)
 	}
 	else
 	{
-	/*checking the parent process */
+	/*checking for the parent process */
 		do {
 			waitpid(pid, &state, WUNTRACED);
 		} while (!WIFEXITED(state) && !WIFSIGNALED(state));

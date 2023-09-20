@@ -1,7 +1,8 @@
 #include "simple.h"
 
 /**
- * my_env - functions that prints enviroment variables
+ * my_env - functions that prints
+ * enviroment variables
  * @args: arguments for the variables
  *
  * Return: 1 on success, 0 if not

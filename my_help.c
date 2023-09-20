@@ -8,13 +8,14 @@
  */
 int my_help(char **args)
 {
-	char *builtin_func_list[] = {"cd", "env",
-		"help",
-		"exit"};
+	char *builtin_func_list[] = {
+		"cd", "env",
+		"help", "exit"};
+
 	unsigned long int i = 0;
 	(void)(**args);
 
-	/*checking for help*/
+	/* checking for helps */
 	printf("\n---help simple_shell---\n");
 	printf("Type a command with arguments, for help\n");
 	printf("Built-in commands:\n");

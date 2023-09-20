@@ -12,11 +12,11 @@ my personal shell terminal
 | ------------------------------ | -------------------------------------------- |
 | shell.h | Header file program. |
 | main.c | Main function, interactive and non-interactive. |
-| new_procees.c | Function that creates a new process. |
-| own_cd.c | Change the working directory. |
-| own_env.c | Function that prints environment variables. |
-| own_exit.c | Exit shell with a given state. |
-| own_help.c | Function that prints help (get information about a command) |
+| my_procees.c | Function that creates a new process. |
+| my_cd.c | Change the working directory. |
+| my_env.c | Function that prints environment variables. |
+| my_exit.c | Exit shell with a given state. |
+| my_help.c | Function that prints help (get information about a command) |
 | read_line.c | Read a line from stdin. |
 | read_stream.c | Read a line from the stream. |
 | shell_interactive.c | Run shell interactive mode. |
@@ -41,11 +41,11 @@ my personal shell terminal
 
 Clone this repo and compile as follow:
 
-> gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o b_shell
+> gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o my_shell
 
 ## Usage
 
-Interactive mode: ```./b_shell```
+Interactive mode: ```./my_shell```
 
 Non-interactive mode: ```echo "/bin/ls" | ./b_shell```
 
@@ -82,7 +82,7 @@ Non-interactive mode: ```echo "/bin/ls" | ./b_shell```
 -rw-r--r-- 1 root root   848 Nov 16 09:35 split_line.c
 ```
 ```
- $ /hsh
+ $ /my_shell
  simple_prompt$ echo “Hello, World!”
  “Hello, World!”
 ```

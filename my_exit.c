@@ -1,7 +1,8 @@
 #include "simple.h"
 
 /**
- * myget_exit - causes normal process to end
+ * myget_exit - causes normal process to end in the
+ * enveronment the code in runing
  * @args: empty args
  *
  * Return: 0 to end the process
