@@ -2,6 +2,8 @@
 
 /**
  * get_execute - run if command is a builtin or a process
+ * state
+ *
  * @args: commands arguments or flag
  *
  * Return: 1 on sucess, 0 if not
@@ -10,7 +12,11 @@ int get_execute(char **args)
 {
 	char *builtin_func_list[] = {"cd", "env", "help", "exit"};
 
-	int (*builtin_func[])(char **) = {&cd, &env, &help, &get_exit};
+	int (*builtin_func[])(char **) = {
+		&cd,
+		&env,
+		&help,
+		&get_exit};
 
 	unsigned long int i = 0;
 
