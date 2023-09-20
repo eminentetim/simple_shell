@@ -21,9 +21,9 @@ char *get_stream(void);
 int npid(char **args);
 char *get_line(void);
 
-int cd(char **args);
-int get_exit(char **args);
-int env(char **args);
-int help(char **args);
+int my_cd(char **args);
+int myget_exit(char **args);
+int my_env(char **args);
+int my_help(char **args);
 
 #endif

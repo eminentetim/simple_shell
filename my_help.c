@@ -1,12 +1,12 @@
 #include "simple.h"
 
 /**
- * help - print help
+ * my_help - print help
  * @args: arguments
  *
  * Return: 1 on success, 0 if not
  */
-int help(char **args)
+int my_help(char **args)
 {
 	char *builtin_func_list[] = {"cd", "env",
 		"help",

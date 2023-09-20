@@ -13,10 +13,10 @@ int get_execute(char **args)
 	char *builtin_func_list[] = {"cd", "env", "help", "exit"};
 
 	int (*builtin_func[])(char **) = {
-		&cd,
-		&env,
-		&help,
-		&get_exit};
+		&my_cd,
+		&my_env,
+		&my_help,
+		&myget_exit};
 
 	unsigned long int i = 0;
 

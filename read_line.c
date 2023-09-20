@@ -1,7 +1,7 @@
 #include "simple.h"
 
 /**
- * get_line - reading a line from stdin
+ * readlf - reading a line from stdin
  *
  * Return: pointer that points to a str with the line content
  */

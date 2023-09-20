@@ -1,7 +1,7 @@
 #include "simple.h"
 
 /**
- * cd - changing the working directory of the current
+ * my_cd - changing the working directory of the current
  *
  * shell executon environment
  *
@@ -9,7 +9,7 @@
  *
  * Return: 1 one success, 0 fot unsuccessful.
  */
-int cd(char **args)
+int my_cd(char **args)
 {
 	if (args[1] == NULL)
 	{
