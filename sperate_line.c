@@ -39,6 +39,9 @@ char **sptlf(char *readl)
 			if (!tokens)
 			{
 				fprintf(stderr, "reallocation of an error in the split_line: tokens");
+
+				/* Free the old buffer before exiting on realloc failure */
+				free(tokens);
 				exit(EXIT_FAILURE);
 			}
 		}

@@ -20,6 +20,7 @@ char *readlf(void)
 		}
 		else
 		{
+			/* Free the old buffer before exiting on realloc failure */
 			free(readl);
 			perror("error while reading the line from stdin");
 			exit(EXIT_FAILURE);
